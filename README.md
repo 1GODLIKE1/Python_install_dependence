@@ -3,6 +3,7 @@
 - GitLab CI/CD
 - Ansible
 - Visual Studio Code
+- Docker
 ## RUN
 To run, you need to run main.py 
 After installation, you need to edit the GitLab configuration file. 
