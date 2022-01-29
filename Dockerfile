@@ -4,18 +4,18 @@ FROM python:3.8-slim
 RUN apt update && apt install sudo
 
 # Package
-RUN mkdir -p /python/
-RUN mkdir -p /python/package/
+RUN mkdir -p /Python_install_dependence/
+RUN mkdir -p /Python_install_dependence/package/
 
 # Packages
-ADD /package/ansible.py /python/package/
-ADD /package/docker.py /python/package/
-ADD /package/gitlab.py /python/package/
-ADD /package/terraform.py /python/package/
-ADD /package/vsCode.py /python/package/
+ADD /package/ansible.py /Python_install_dependence/package/
+ADD /package/docker.py /Python_install_dependence/package/
+ADD /package/gitlab.py /Python_install_dependence/package/
+ADD /package/terraform.py /Python_install_dependence/package/
+ADD /package/vsCode.py /Python_install_dependence/package/
 
 # Main python
-ADD dependence.py /python/
-ADD main.py /python/
+ADD dependence.py /Python_install_dependence/
+ADD main.py /Python_install_dependence/
 
 ENTRYPOINT ["python3", "/python/main.py"]
